@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".expend.AddActivity">
+
+    <TextView
+        android:id="@+id/add_title_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="대분류 추가"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/add_title_edit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="여기에 입력 하세요"
+        android:textSize="20dp"
+        android:maxLength="8"/>
+
+    <Button
+        android:id="@+id/add_save_btn"
+        android:background="@drawable/button_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="저장"
+        android:layout_gravity="right"
+        android:layout_marginRight="10dp"
+        />
+
+
+
+</LinearLayout>

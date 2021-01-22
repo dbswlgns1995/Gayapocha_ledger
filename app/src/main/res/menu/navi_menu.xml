@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item android:id="@+id/item1"
+            android:title="수입"/>
+
+        <item android:id="@+id/item2"
+            android:title="영수증"/>
+
+        <item android:id="@+id/item3"
+            android:title="지출"/>
+
+        <item android:id="@+id/item4"
+            android:title="달력"/>
+
+        <item android:id="@+id/item5"
+            android:title="수입 분석"/>
+
+        <item android:id="@+id/item6"
+            android:title="소득 분석"/>
+
+        <item android:id="@+id/item7"
+            android:title="품목별 분석"/>
+
+        <item android:id="@+id/item8"
+            android:title="국 분석"/>
+
+        <item android:id="@+id/item9"
+            android:title="안주 분석"/>
+
+        <item android:id="@+id/item10"
+            android:title="주류 분석"/>
+
+    </group>
+
+</menu>

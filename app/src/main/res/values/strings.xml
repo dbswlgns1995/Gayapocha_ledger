@@ -1,0 +1,46 @@
+<resources>
+    <string name="app_name">가야포차 장부</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
+    <string-array name="day_month_year">
+        <item>일간</item>
+        <item>월간</item>
+        <item>년간</item>
+    </string-array>
+
+    <string-array name="month_year">
+        <item>월간</item>
+        <item>년간</item>
+    </string-array>
+
+    <string-array name="analysis_first">
+        <item>소득</item>
+        <item>수입</item>
+        <item>지출</item>
+    </string-array>
+
+    <string-array name="item">
+        <item>수구레 국밥</item>
+        <item>선지 국밥</item>
+        <item>소고기국밥</item>
+        <item>공기밥</item>
+        <item>계란추가</item>
+        <item>수구레무침</item>
+        <item>수구레볶음</item>
+        <item>오삼불고기</item>
+        <item>오돌뼈</item>
+        <item>닭갈비</item>
+        <item>돼지석쇠</item>
+        <item>술국</item>
+        <item>부추전</item>
+        <item>소주</item>
+        <item>맥주</item>
+        <item>생탁</item>
+        <item>음료수</item>
+
+    </string-array>
+
+
+</resources>

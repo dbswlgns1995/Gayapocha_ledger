@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.gayapocha_ledger">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/money"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/money"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+        tools:replace="android:icon">
+        <activity android:name=".chart.BeveragesActivity"></activity>
+        <activity android:name=".chart.SnacksActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chart.MealsActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chart.GiAnalysisActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chart.ItemAnalysisActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".chart.IncomeAnalysisActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".calendar.DailyBillActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".calendar.CalendarActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".bill.BillUpdateActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden"/>
+        <activity
+            android:name=".bill.BillActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".expend.ExpendActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".expend.AddActivity"
+            android:theme="@style/Theme.MyDialog"
+            android:screenOrientation="unspecified"/>
+        <activity
+            android:name=".ledger.MainActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
