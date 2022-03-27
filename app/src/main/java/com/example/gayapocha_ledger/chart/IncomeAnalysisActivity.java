@@ -69,7 +69,7 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
 
 
     // cost
-    private static final int[] income_cost_list = {7000, 6000, 6000, 1000, 2000, 20000, 20000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+    private static final int[] income_cost_list = {8000, 7000, 7000, 1000, 2000, 25000, 25000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
 
 
     // 수입 분석

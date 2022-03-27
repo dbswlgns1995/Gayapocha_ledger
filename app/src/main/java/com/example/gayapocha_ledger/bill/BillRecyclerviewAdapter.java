@@ -43,7 +43,7 @@ public class BillRecyclerviewAdapter extends RealmRecyclerViewAdapter<IncomeItem
 
 
     // cost
-    private static final int[] income_cost = {7000, 6000, 6000, 1000, 2000, 20000, 20000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+    private static final int[] income_cost = {8000, 7000, 7000, 1000, 2000, 25000, 25000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
 
     private Realm realm;
     Context context;
