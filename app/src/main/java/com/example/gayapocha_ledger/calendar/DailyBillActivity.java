@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.example.gayapocha_ledger.R;
 import com.example.gayapocha_ledger.ledger.IncomeItem;
 import com.example.gayapocha_ledger.ledger.IncomeList;
+import com.example.gayapocha_ledger.util.NewBill;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -55,7 +56,7 @@ public class DailyBillActivity extends AppCompatActivity {
     };
 
     // cost
-    private static final int[] income_cost = {8000, 7000, 7000, 1000, 2000, 25000, 25000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+    private static final int[] income_cost = {7000, 6000, 6000, 1000, 2000, 20000, 20000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -82,7 +83,14 @@ public class DailyBillActivity extends AppCompatActivity {
 
         for(int i=0; i< count_text_id.length; i++){
             count_text_list.get(i).setText(toNumFormat(daily_count[i]));
-            cost_text_list.get(i).setText(toNumFormat(daily_count[i] * income_cost[i]));
+
+            if (date >= 20220328){
+                cost_text_list.get(i).setText(toNumFormat(daily_count[i] * NewBill.new_income_list[i]));
+            } else {
+                cost_text_list.get(i).setText(toNumFormat(daily_count[i] * income_cost[i]));
+            }
+
+
         }
 
 

@@ -26,6 +26,7 @@ import com.example.gayapocha_ledger.ledger.IncomeItem;
 import com.example.gayapocha_ledger.ledger.IncomeList;
 import com.example.gayapocha_ledger.ledger.MainActivity;
 import com.example.gayapocha_ledger.ledger.ViewPagerAdapter;
+import com.example.gayapocha_ledger.util.NewBill;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
 import com.whiteelephant.monthpicker.MonthPickerDialog;
@@ -69,7 +70,7 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
 
 
     // cost
-    private static final int[] income_cost_list = {8000, 7000, 7000, 1000, 2000, 25000, 25000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+    private static final int[] income_cost_list = {7000, 6000, 6000, 1000, 2000, 20000, 20000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
 
 
     // 수입 분석
@@ -190,7 +191,12 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults1) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[1] += (j.getCount() * income_cost_list[index]);
+
+                    if (i.getDate() >= 20220328){
+                        sum_cost[1] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[1] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -199,7 +205,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults2) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[2] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -208,7 +218,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults3) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[3] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -217,7 +231,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults4) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[5] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -226,7 +244,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults5) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[6] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -235,7 +257,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults6) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[7] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -265,7 +291,12 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults1) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[1] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[1] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[1] += (j.getCount() * income_cost_list[index]);
+                    }
+
                 }
             }
 
@@ -274,7 +305,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults2) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[2] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -283,7 +318,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults3) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[3] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -292,7 +331,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults4) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[5] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -301,7 +344,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults5) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[6] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -310,7 +357,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults6) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[7] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -339,7 +390,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults1) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[1] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[1] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[1] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -348,7 +403,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults2) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[2] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[2] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -357,7 +416,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults3) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[3] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[3] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -366,7 +429,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults4) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[5] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[5] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -375,7 +442,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults5) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[6] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[6] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 
@@ -384,7 +455,11 @@ public class IncomeAnalysisActivity extends AppCompatActivity {
             for (IncomeItem i : realmResults6) {
                 for (IncomeList j : i.getIncomeLists()) {
                     int index = mNewList.indexOf(j.getTitle());
-                    sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    if (i.getDate() >= 20220328){
+                        sum_cost[7] += (j.getCount() * NewBill.new_income_list[index]);
+                    } else {
+                        sum_cost[7] += (j.getCount() * income_cost_list[index]);
+                    }
                 }
             }
 

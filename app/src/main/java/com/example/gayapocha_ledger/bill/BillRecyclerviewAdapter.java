@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.gayapocha_ledger.R;
 import com.example.gayapocha_ledger.ledger.IncomeItem;
 import com.example.gayapocha_ledger.ledger.IncomeList;
+import com.example.gayapocha_ledger.util.NewBill;
 
 import org.w3c.dom.Text;
 
@@ -43,7 +45,8 @@ public class BillRecyclerviewAdapter extends RealmRecyclerViewAdapter<IncomeItem
 
 
     // cost
-    private static final int[] income_cost = {8000, 7000, 7000, 1000, 2000, 25000, 25000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+    private static final int[] income_cost = {7000, 6000, 6000, 1000, 2000, 20000, 20000, 15000, 15000, 15000, 15000, 6000, 6000, 4000, 4000, 3500, 1500};
+
 
     private Realm realm;
     Context context;
@@ -87,7 +90,14 @@ public class BillRecyclerviewAdapter extends RealmRecyclerViewAdapter<IncomeItem
             titleList.add(i.getTitle());
             countList.add(i.getCount());
             int index = mNewList.indexOf(i.getTitle());
-            result += (income_cost[index] * i.getCount()); // 1회분 빌지 합계 result text 에 저장
+
+            if (date >= 20220328){
+                result += (NewBill.new_income_list[index] * i.getCount());
+            } else {
+                result += (income_cost[index] * i.getCount()); // 1회분 빌지 합계 result text 에 저장
+            }
+
+
         }
 
         // 3순위 까지 저장, 없으면 공백
